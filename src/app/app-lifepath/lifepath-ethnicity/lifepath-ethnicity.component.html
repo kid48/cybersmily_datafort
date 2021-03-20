@@ -1,12 +1,12 @@
 <div>
-  <h4 style="display:inline-block;">Ethnicity</h4>&nbsp;&nbsp;
-  <button class="btn-secondary csd-rounded" (click)="generateRandom()">Generate</button>
+  <h4 style="display:inline-block;">Этническая принадлежность</h4>&nbsp;&nbsp;
+  <button class="btn-secondary csd-rounded" (click)="generateRandom()">Сгенерировать</button>
 </div>
 <div class="csd-rounded csd-lifepath-sect">
   <div class="cs-title-heading">
-    <h6>Ethnicity: </h6>
+    <h6>Этническая принадлежность: </h6>
     <input type="checkbox" id="csisPolygot" [(ngModel)]="isPolygot" *ngIf="lifepathSource === 'NeoTribe'" class="cs-inline" />
-    <label for="csisPolygot"*ngIf="lifepathSource === 'NeoTribe'">Is Polygot</label>
+    <label for="csisPolygot"*ngIf="lifepathSource === 'NeoTribe'">Полиглот</label>
   </div>
   <div class="row">
     <div class="col-4">
@@ -31,7 +31,7 @@
       </select>
     </div>
   </div>
-  <h6>Language: </h6>
+  <h6>Языки: </h6>
   <div class="row">
     <div class="col-4">
     <select [(ngModel)]="selectedLanguageOne"

@@ -23,57 +23,57 @@
       9
     ],
     "values":[
-    {"name":"Melee", "choices":[
-      {"name":"club","type":"MEL","wa":0,"con":"L","damage":"1D6"},
-      {"name":"knife","type":"MEL","wa":0,"con":"P","damage":"1D6"},
-      {"name":"axe","type":"MEL","wa":-1,"con":"N","damage":"2D6+3"},
-      {"name":"switchblade","type":"MEL","wa":0,"con":"P","damage":"1D6/2"},
-      {"name":"sword","type":"MEL","wa":0,"con":"L","damage":"2D6+2"},
+    {"name":"Рукопашный бой", "choices":[
+      {"name":"дубина","type":"MEL","wa":0,"con":"L","damage":"1D6"},
+      {"name":"нож","type":"MEL","wa":0,"con":"P","damage":"1D6"},
+      {"name":"топор","type":"MEL","wa":-1,"con":"N","damage":"2D6+3"},
+      {"name":"выкидной нож","type":"MEL","wa":0,"con":"P","damage":"1D6/2"},
+      {"name":"меч","type":"MEL","wa":0,"con":"L","damage":"2D6+2"},
       {"name":"nunchaku","type":"MEL","wa":0,"con":"L","damage":"3D6"},
-      {"name":"tonfa","type":"MEL","wa":0,"con":"L","damage":"2D6"},
-      {"name":"shuriken","type":"MEL","wa":0,"con":"P","damage":"1D6/3","note":"thrown"},
-      {"name":"brass knuckles","type":"MEL","wa":0,"con":"P","damage":"1d6+2"},
-      {"name":"sledgehammer","type":"MEL","wa":-2,"con":"N","damage":"4d6"},
-      {"name":"chainsaw","type":"MEL","wa":-3,"con":"N","damage":"4d6","note":"AP vs soft armor; 2SP/hit to armor."},
-      {"name":"machete","type":"MEL","wa":0,"con":"L","damage":"1D6+3"}
+      {"name":"нунчаки","type":"MEL","wa":0,"con":"L","damage":"2D6"},
+      {"name":"сюрикен","type":"MEL","wa":0,"con":"P","damage":"1D6/3","note":"thrown"},
+      {"name":"кастет","type":"MEL","wa":0,"con":"P","damage":"1d6+2"},
+      {"name":"кувалда","type":"MEL","wa":-2,"con":"N","damage":"4d6"},
+      {"name":"бензопила","type":"MEL","wa":-3,"con":"N","damage":"4d6","note":"AP vs soft armor; 2SP/hit to armor."},
+      {"name":"мачете","type":"MEL","wa":0,"con":"L","damage":"1D6+3"}
     ]},
-    {"name":"Light Pistol", "choices": [
+    {"name":"Легкие Пистолеты", "choices": [
       {"name":"BudgetArms C-13","type":"P","wa":-1,"con":"P","damage":"1D6","shots":8,"rof":2,"rel":"ST","rng":50},
       {"name":"Dai Lung Cybermag 15","type":"P","wa":-1,"con":"P","damage":"1D6+1","shots":10,"rof":2,"rel":"UR","rng":50},
       {"name":"Federated Arms X-22","type":"P","wa":0,"con":"P","damage":"1D6+1","shots":10,"rof":2,"rel":"ST","rng":50}
     ]},
-    {"name":"Med. Pistol", "choices": [
+    {"name":"Средние Пистолеты", "choices": [
       {"name":"Militech Arms Avenger","type":"P","wa":0,"con":"J","damage":"2D6+1","shots":10,"rof":2,"rel":"VR","rng":50},
       {"name":"Dai Lung Streetmaster","type":"P","wa":0,"con":"J","damage":"2D6+3","shots":12,"rof":2,"rel":"UR","rng":50},
       {"name":"Federated Arms X-9mm","type":"P","wa":0,"con":"J","damage":"2D6+1","shots":12,"rof":2,"rel":"ST","rng":50}
     ]},
-    {"name":"Heavy Pistol", "choices": [
+    {"name":"Тяжелые Пистолеты", "choices": [
       {"name":"BudgetArms Auto 3","type":"P","wa":-1,"con":"J","damage":"3D6","shots":8,"rof":2,"rel":"UR","rng":50},
       {"name":"Sternmeyer Type 35","type":"P","wa":0,"con":"J","damage":"3D6","shots":8,"rof":2,"rel":"VR","rng":50}
     ]},
-    {"name":"Very Heavy Pistol", "choices": [
+    {"name":"Очень Тяжелые Пистолеты", "choices": [
       {"name":"Armalite 44","type":"P","wa":0,"con":"J","damage":"4d6+1","shots":8,"rof":2,"rel":"ST","rng":50},
       {"name":"Colt AMT Model 2000","type":"P","wa":0,"con":"J","damage":"4d6+1","shots":8,"rof":2,"rel":"VR","rng":50}
     ]},
-    {"name":"Light SMG", "choices": [
+    {"name":"Легкие ПП", "choices": [
       {"name":"Uzi Miniauto 9","type":"SMG","wa":1,"con":"J","damage":"2D6+1","shots":30,"rof":35,"rel":"VR","rng":150},
       {"name":"H\\&K MP-2013","type":"SMG","wa":1,"con":"J","damage":"2D6+3","shots":35,"rof":32,"rel":"ST","rng":150},
       {"name":"Fed. Arms Tech Assault II","type":"SMG","wa":1,"con":"J","damage":"1D6+1","shots":50,"rof":25,"rel":"ST","rng":150}
     ]},
-    {"name":"Medium SMG", "choices": [
+    {"name":"Средние ПП", "choices": [
       {"name":"Arasaka Minami 10","type":"SMG","wa":0,"con":"J","damage":"2D6+3","shots":40,"rof":20,"rel":"VR","rng":200},
       {"name":"H\\&K MPK-9","type":"SMG","wa":1,"con":"J","damage":"2D6+1","shots":35,"rof":25,"rel":"ST","rng":200}
     ]},
-    {"name":"Heavy SMG", "choices": [
+    {"name":"Тяжелые ПП", "choices": [
       {"name":"Sternmeyer SMG 21","type":"SMG","wa":-1,"con":"L","damage":"3D6","shots":30,"rof":15,"rel":"VR","rng":200},
       {"name":"H\\&K MPK-11","type":"SMG","wa":0,"con":"L","damage":"4D6+1","shots":30,"rof":20,"rel":"ST","rng":200},
       {"name":"Ingram MAC 14","type":"SMG","wa":-2,"con":"L","damage":"4D6+1","shots":20,"rof":10,"rel":"ST","rng":200}
     ]},
-    {"name":"Shotgun", "choices": [
+    {"name":"Ружья", "choices": [
       {"name":"Arasaka Rapid Assault 12","type":"RIF","wa":-1,"con":"N","damage":"4D6","shots":20,"rof":10,"rel":"ST","rng":50},
       {"name":"Sternmeyer Stakeout 10","type":"RIF","wa":-2,"con":"N","damage":"4D6","shots":10,"rof":2,"rel":"ST","rng":50}
     ]},
-    {"name":"Assault Rifle", "choices": [
+    {"name":"Автоматы", "choices": [
       {"name":"Militech Ronin","type":"RIF","wa":1,"con":"N","damage":"5D6","shots":35,"rof":30,"rel":"VR","rng":400},
       {"name":"AKR-20","type":"RIF","wa":0,"con":"N","damage":"5D6","shots":30,"rof":30,"rel":"ST","rng":400},
       {"name":"FN-RAL","type":"RIF","wa":-1,"con":"N","damage":"6D6+2","shots":30,"rof":30,"rel":"VR","rng":400},

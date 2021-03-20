@@ -1,18 +1,17 @@
 <div class="container">
   <div class="row">
     <div class="col-sm-12">
-      <h2>LifePath Generator</h2>
-      This is my version of another lifepath generator. Choose a source before beginning.
-      Most of the sourcebooks that contain some part of lifepath
-      generation have been included.
-      <br> Click on GENERATE to have randomly selected entries in that section.
-      <br> For life events, enter the number of events to generate in the box  and then click GENERATE.
-      If you enter a number less than 1 or a non-numerical value, then a value between 2-12 will be generated.
+      <h2>Генератор жизненного пути</h2>
+      Это моя версия еще одного генератора жизненных путей. Перед тем, как начать, выберите источник.
+      Большинство справочников, которые содержат какую-то часть жизненного пути
+      поколения были включены.
+      <br> Для жизненных событий введите количество событий, которые необходимо сгенерировать, в поле, а затем нажмите Сгенерировать.
+      Если вы введете число меньше 1 или нечисловое значение, будет сгенерировано значение от 2 до 12.
     </div>
   </div>
   <div class="row">
     <div class="col-12">
-      <h4 style="display:inline-block;">Select Source:</h4>
+      <h4 style="display:inline-block;">Выберите Источник:</h4>
       <span>
         <select [(ngModel)]="selectedSource" style="width:250px;" >
           <option *ngFor="let source of sourceList" [ngValue]="source.value">{{source.title}}</option>
@@ -33,7 +32,7 @@
   <div class="row">
     <div class="col-12 col-md-4">
       <cs-lifepath-chart
-      [header]="'Appearance'"
+      [header]="'Внешность'"
       [chartData]="appearanceList"
       [lifepathSource]="selectedSource"
       (valueChange)="onChartChange($event)"
@@ -46,7 +45,7 @@
     </div>
     <div class="col-12 col-md-6">
         <cs-lifepath-chart
-        [header]="'Motivations'"
+        [header]="'Мотивации'"
         [chartData]="motivationList"
         (valueChange)="onChartChange($event)"
         [lifepathSource]="selectedSource"></cs-lifepath-chart>

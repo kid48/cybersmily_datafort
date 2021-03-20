@@ -2,15 +2,15 @@
 <button class="btn-secondary csd-rounded" (click)="generateFamily()">Generate</button>
 <div class="csd-rounded csd-lifepath-sect">
   <div>
-    <h5>Family Ranking:</h5>
+    <h5>Семейный рейтинг:</h5>
     <div>{{generatedFamily.familyRanking}}</div>
   </div>
   <div>
-    <h5>Family Background:</h5>
+    <h5>История семьи:</h5>
   </div>
   <div>{{generatedFamily.familyBackground }}</div>
   <div>
-    <h5>Siblings({{generatedFamily.siblings.count()}}):</h5>
+    <h5>Братья и сестры({{generatedFamily.siblings.count()}}):</h5>
     <div>{{generatedFamily.siblings.getDescription()}}</div>
   </div>
 </div>

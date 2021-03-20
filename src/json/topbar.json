@@ -1,6 +1,6 @@
 ﻿{"nodes":[
 	{"title":"Data","links":[
-		{"title":"More Guns","link":"#moreguns"}, 
+		{"title":"More Guns","link":"#moreguns"},
 		{"title":"Proteus Conversion","link":"","sublinks":[
 			{"title":"Programs","link":"#proteus-progm"},
 			{"title":"Decks, Cyber, Gear","link":"#proteus-gear"},

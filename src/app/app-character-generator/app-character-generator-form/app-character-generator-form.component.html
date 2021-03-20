@@ -1,30 +1,30 @@
 <div class="container">
   <div class="hidden-print">
-    <h3>Cyberpunk 2020 Character Generator</h3>
+    <h3>Cyberpunk 2020 Создатель персонажа</h3>
     <p>
-      This is a utility to create a Cyberpunk 2020 character.
-      Here you will be able to create, save, load, and print character sheets.
-      There is still a bit of work to be done, but this should help with starting out with the basics.
+      Это утилита для создания персонажа Cyberpunk 2020.
+      Здесь вы сможете создавать, сохранять, загружать и печатать листы персонажей.
+      Предстоит еще немного поработать, но это должно помочь в начале работы с основами.
     </p>
     <p>
-      SAVE/UPLOAD - The data is save into a .txt file.
-      This is the JSON object of the character.
-      If you want to mess with it, back the file up before you edit it.
-      This is a free app and created in my spare time so if you broke it you bought it ;-).
+      СОХРАНИТЬ / ЗАГРУЗИТЬ - данные сохраняются в файле .txt.
+      Это объект персонажа в формате JSON.
+      Если вы хотите с ним повозиться, сделайте резервную копию файла, прежде чем редактировать его.
+      Это бесплатное приложение, созданное в свободное время, поэтому, если вы его сломали, вы его купили ;-).
     </p>
-    <p>PDF - this will export the character sheet to a PDF file. This PDF file cannot be uploaded to the this sheet.
-      You will need to save the file as a txt file has mentioned above.
+    <p>PDF - таблица персонажей будет экспортирована в файл PDF. Этот PDF-файл нельзя загрузить на этот лист.
+      Вам нужно будет сохранить файл, как указано выше в текстовом файле.
     </p>
     <p>
-      If you see <fa-icon [icon]="faDice"></fa-icon> icon, click it to get dice roll for a skill or save, or generate
-      random lifepath.
+      Если вы видите значок <fa-icon [icon] = "faDice"> </fa-icon>, щелкните его, чтобы получить бросок кубика для навыка или сохранения, или сгенерировать
+      случайный жизненный путь.
     </p>
   </div>
   <div class="row hidden-print">
     <div class="col-12">
       <hr color="#999999" style="width:100%;">
       <p>
-        <fa-icon [icon]="faUndo" title="Reset the sheet to a blank character"
+        <fa-icon [icon]="faUndo" title="Сбросить лист персонажа"
         class="csd-chargen-btn csd-btn"
         (click)="resetCharacter()"
         ></fa-icon>
@@ -32,13 +32,13 @@
         <fa-icon [icon]="faFilePdf"
           class="csd-chargen-btn float-right csd-btn mr-2"
           (click)="createPDF()"
-          title="Export as a PDF file"></fa-icon>
+          title="Экспорт в PDF-файл"></fa-icon>
 
           <input type="file" id="loadFile" title="load a character .txt file" name="Load" Style="display: none"
           (change)="loadCharacter($event)" #inputFile (click)="inputFile.value = null" accept="text/plain;text/json" />
-          <label for="loadFile" class="csd-btn float-right mr-2"><fa-icon [icon]="faUpload" title="load a character .txt file"></fa-icon></label>
+          <label for="loadFile" class="csd-btn float-right mr-2"><fa-icon [icon]="faUpload" title="Загрузить файл персонажа .txt"></fa-icon></label>
 
-          <fa-icon [icon]="faSave" title="Save the character to a file"
+          <fa-icon [icon]="faSave" title="Сохранить файл персонажа .txt"
             class="csd-chargen-btn csd-btn float-right mr-2"
             (click)="saveCharacter()"></fa-icon>
       </p>

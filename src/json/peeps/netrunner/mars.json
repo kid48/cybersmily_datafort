@@ -32,7 +32,7 @@
 			{"name":"Perform","value":6}
 		],
 		"int":[
-			{"name":"Accounting","value":2},
+			{"name":"Бухгалтерский учет","value":2},
 			{"name":"Awareness/Notice","value":5},
 			{"name":"Composition","value":6},
 			{"name":"Education/Gen. Know","value":8},

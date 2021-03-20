@@ -21,6 +21,6 @@
     {"category":"Performance"    , "name":"Play Instrument"  , "stat": "EMP"  , "desc":""},
     {"category":"Education"      , "name":"Education"        , "stat": "INT"  , "desc":""},
     {"category":"Education"      , "name":"Local Expert"     , "stat": "INT"  , "desc":""},
-    {"category":"Role Ability"   , "name":"Interface"        , "stat": ""     , "desc":""}
+    {"category":"Role Ability"   , "name":"Интерфейс"        , "stat": ""     , "desc":""}
   ]
 }

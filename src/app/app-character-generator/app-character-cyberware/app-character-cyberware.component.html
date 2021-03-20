@@ -1,12 +1,12 @@
 <div class="chargen-section chargen-section-skills">
   <table class="chargen-cyber-table">
     <tr>
-      <td colspan="3" class="chargen-label">CYBERNETICS</td>
+      <td colspan="3" class="chargen-label">Кибернетика</td>
     </tr>
     <tr class="chargen-cyber-header">
-      <td class="chargen-cyber-type">Type</td>
-      <td class="chargen-cyber-hl">HL</td>
-      <td class="chargen-cybercost">Cost</td>
+      <td class="chargen-cyber-type">Тип</td>
+      <td class="chargen-cyber-hl">Пот Чел</td>
+      <td class="chargen-cybercost">Стоимость</td>
     </tr>
     <tr *ngFor="let cyber of cyberware.items" class="chargen-cyber-row">
       <td><input [(ngModel)]="cyber.name" (change)="onChangeCyberware()" type="text"/></td>

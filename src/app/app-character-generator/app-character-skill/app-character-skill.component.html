@@ -2,7 +2,7 @@
 [ngClass]="{'article': true, 'chargen-skill-is-role': skill.isRoleSkill,'chargen-skill-is-secodary ': skill.isSecondarySkill, 'chargen-role-choice': skill.roleChoice, 'chargen-skill': true}"
 >
     <span [ngClass]="{'rounded': true, 'sa-name': isSpecialAbility, 'skill-name': true }">{{skill.name}}<fa-icon [icon]="faDice"
-      title="Click to Roll" (click)="onClick(chargenSkillRoll)"></fa-icon></span>
+      title="Нажмите, чтобы бросить кости" (click)="onClick(chargenSkillRoll)"></fa-icon></span>
     <input *ngIf="skill.option || skill.option === ''" [(ngModel)]="skill.option" type="text" class="chargen-skil-option"/>
     <span *ngIf="skill.ipMod > 1">({{skill.ipMod}}) </span>
     <span class="dots"></span>
@@ -25,14 +25,14 @@
 </div>
 <ng-template #chargenSkillRoll>
   <div class="modal-header">
-    <h4 class="modal-title pull-left">{{skill.name}}{{(skill.option ? ': ' + skill.option : '')}} Dice Roll</h4>
+    <h4 class="modal-title pull-left">{{skill.name}}{{(skill.option ? ': ' + skill.option : '')}} Бросок костей</h4>
     <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
       <span aria-hidden="true">&times;</span>
     </button>
   </div>
   <div class="modal-body">
     <div>
-    {{this.skill.value}}(skill) + <span *ngIf="stat">{{this.stat.Adjusted}}(stat) +</span> {{this.dieRoll}}(roll) = {{this.totalRoll}} total
+    {{this.skill.value}}(Навык) + <span *ngIf="stat">{{this.stat.Adjusted}}(Стат) +</span> {{this.dieRoll}}(Бросок) = {{this.totalRoll}} Всего
   </div>
   <div>
     {{rollMessage}}
