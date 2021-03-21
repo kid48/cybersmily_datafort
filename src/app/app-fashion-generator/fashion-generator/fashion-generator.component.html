@@ -1,13 +1,11 @@
 <div class="container">
   <div>
-    <h2>Fashion Calculator Utility</h2>
+    <h2>Калькулятор стоимости Одежды</h2>
     <P>
-    The Fashion Calculator uses the system from Chromebook 3/4
-    (Buy the book from <a href="https://talsorianstore.com/collections/cyberpunk/products/chromebook-3-4" alt="R. Talsorian Games" target="_blank">R. Talsorian here</a>
-    or the PDF from <a href="https://www.drivethrurpg.com/product/114828/Chromebook-3-4" alt="Drive Thru RPG" target="_blank">DriveThru RPG here</a>).
+      Калькулятор стоимости Одежды использует систему из Chromebook 3/4
     </P>
-    <p>Choose the various options below (<span style="color: red">*</span> required). Once you have choose all the options you want, click on Buy button to add it to the list.</p>
-    <p>Click on Save button to print a text file of the clothing list you have created.</p>
+    <p>Выберите различные варианты ниже (<span style="color: red">*</span> required). Выбрав все необходимые параметры, нажмите кнопку «Купить», чтобы добавить их в список.</p>
+    <p>Нажмите кнопку «Сохранить», чтобы распечатать текстовый файл со списком одежды, который вы создали.</p>
   </div>
   <div id="fcSelectorControls" class="row">
     <div class="col-12 col-md-7">
@@ -19,7 +17,7 @@
       <cs-fashion-list [clothingList]="clothingList" [totalCost]="clothingTotal">
       </cs-fashion-list>
       <div>
-        <input type="button" title="Save" class="pull-right btn-secondary csd-rounded csd-fash-btn" value="Save"
+        <input type="button" title="СОХРАНИТЬ" class="pull-right btn-secondary csd-rounded csd-fash-btn" value="СОХРАНИТЬ"
         (click)="saveList()" [disabled]="isListEmpty()" />
       </div>
     </div>

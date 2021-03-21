@@ -76,10 +76,10 @@ export class FashionGeneratorComponent implements OnInit {
   saveList() {
     let output = '';
     this.clothingList.forEach((item, index) => {
-      output += item.quality.name + ' ';
+      output += 'Качество: ' + item.quality.name;
       output += item.style.name + ' ';
       if (item.isLeather) {
-        output += 'leather ';
+        output += 'Кожаное ';
       }
       output += item.clothes.name;
       if (item.spRating.sp > 0 ) {
@@ -98,7 +98,7 @@ export class FashionGeneratorComponent implements OnInit {
       output += ' - ' + item.totalCost.toLocaleString() + 'eb';
       output += '\r\n';
     });
-    output += 'TOTAL COST: ' + this.clothingTotal.toLocaleString() + 'eb';
+    output += 'ОБЩАЯ СТОИМОСТЬ: ' + this.clothingTotal.toLocaleString() + 'eb';
     this.saveFileService.SaveAsFile('CP2020FashionList', output);
   }
 

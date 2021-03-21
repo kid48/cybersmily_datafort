@@ -1,28 +1,28 @@
 <div class="row">
   <div class="col-12 col-md-11">
     <div class="row">
-      <div class="col-12">TYPE: <span>{{currClothing.clothes.name}}</span>
-        <input type="button" title="Buy" class="pull-right btn-secondary csd-rounded csd-fash-btn" value="Buy"
+      <div class="col-12">Тип одежды: <span>{{currClothing.clothes.name}}</span>
+        <input type="button" title="Купить" class="pull-right btn-secondary csd-rounded " value="КУПИТЬ"
           (click)="purchase($event)" [disabled]="!isPurchaseable()" />
       </div>
     </div>
     <div class="row">
-      <div class="col-5">Locations: <span>{{currClothing.clothes.loc}}</span></div>
-      <div class="col-4">Weight: <span>{{currClothing.clothes.wt}}</span></div>
+      <div class="col-5">Расположение: <span>{{currClothing.clothes.loc}}</span></div>
+      <div class="col-4">Вес: <span>{{currClothing.clothes.wt}}</span></div>
       <div class="col-3">EV: <span>{{currClothing.ev}}</span></div>
     </div>
     <div class="row">
-      <div class="col-12">Total Cost: <span>{{currClothing.totalCost | number}}</span>eb</div>
+      <div class="col-12">Общая стоимость: <span>{{currClothing.totalCost | number}}</span>eb</div>
     </div>
     <div>
       <cs-fashion-clothes-selector [clothing]="clothes" (selectClothing)="changeClothing($event)"
         (selectLeather)="selectLeather($event)"></cs-fashion-clothes-selector>
-      <cs-fashion-selector [label]="'Style'" [data]="styleList"
+      <cs-fashion-selector [label]="'Стиль'" [data]="styleList"
         [selectedValue]="currClothing.style"
         [isRequired]="true"
         (selectOption)="selectStyle($event)">
       </cs-fashion-selector>
-      <cs-fashion-selector [label]="'Quality'" [data]="qualityList"
+      <cs-fashion-selector [label]="'Качество'" [data]="qualityList"
         [selectedValue]="currClothing.quality"
         [isRequired]="true"
         (selectOption)="selectQuality($event)"></cs-fashion-selector>

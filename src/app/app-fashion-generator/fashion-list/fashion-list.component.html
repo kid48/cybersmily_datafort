@@ -1,16 +1,16 @@
 <table class="cs-cloth-lst">
   <tr class="hdr-row">
-      <td class="cloth">Clothing</td>
-      <td class="cloth-loc text-center">Locations</td>
+      <td class="cloth">Наименование</td>
+      <td class="cloth-loc text-center">Расположение</td>
       <td class="cloth-ev text-center">EV</td>
-      <td class="cloth-cost text-center">Cost</td>
+      <td class="cloth-cost text-center">Стоимость</td>
   </tr>
   <tr *ngFor="let clothing of clothingList">
       <td class="cloth-item">
-          <span>{{clothing.quality.name}}</span>
-          <span>{{clothing.style.name}}</span>
-          <span *ngIf="clothing.isLeather">leather</span>
-          <span>{{clothing.clothes.name}}</span>
+          <span>Качество: {{clothing.quality.name}}</span><br>
+          <span>Стиль:{{clothing.style.name}}</span><br>
+          <span *ngIf="clothing.isLeather">Сделано из кожы</span>
+          <span>Тип: {{clothing.clothes.name}}</span>
           <br />
           <span *ngFor="let opt of clothing.options" class="cloth-options"> *{{opt.name}}</span>
         </td>
@@ -19,7 +19,7 @@
       <td class="text-right"><span>{{clothing.totalCost | number}}eb</span></td>
   </tr>
   <tr>
-      <td colspan="3" class="cloth-total">TOTAL:</td>
+      <td colspan="3" class="cloth-total">Всего:</td>
       <td class="text-right"><span>{{totalCost | number}}</span>eb</td>
   </tr>
 </table>
