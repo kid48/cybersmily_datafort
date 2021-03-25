@@ -1,5 +1,5 @@
 [
-{"name":"Accounting"                      ,"ipmod":1,"stat":"INT"  ,"source":"CP2020" ,"page":48  ,"isspecialability":false,"description":"" },
+{"name":"Бухгалтерия"                      ,"ipmod":1,"stat":"INT"  ,"source":"CP2020" ,"page":48  ,"isspecialability":false,"description":"" },
 {"name":"Action Game"                     ,"ipmod":1,"stat":"REF"  ,"source":"PAC"    ,"page":153 ,"isspecialability":false,"description":"" },
 {"name":"Aero Tech"                       ,"ipmod":2,"stat":"TECH" ,"source":"CP2020" ,"page":52  ,"isspecialability":false,"description":"" },
 {"name":"Animal Handler"                  ,"ipmod":1,"stat":"EMP"  ,"source":"SF"     ,"page":26  ,"isspecialability":false,"description":"" },

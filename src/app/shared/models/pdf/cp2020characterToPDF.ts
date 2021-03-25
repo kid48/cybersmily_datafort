@@ -6,6 +6,8 @@ import { Cp2020PlayerGearList } from './../cp2020character/cp2020-player-gear-li
 import { Cp2020ArmorBlock } from './../cp2020character/cp2020-armor-block';
 import { Cp2020StatBlock } from './../cp2020character/cp2020-stat-block';
 import { Cp2020PlayerCharacter } from '../cp2020character/cp2020-player-character';
+import { str } from './PTSans';
+
 
 import {jsPDF} from 'jspdf';
 
@@ -18,13 +20,11 @@ export class Cp2020characterToPDF {
   private _midPage = 105;
   private _fontSize = 11;
   private _pageHeight = 290;
-  private _font = 'Arial';
+  private _font = 'PTSans';
 
   generatePdf( character: Cp2020PlayerCharacter) {
     this._character = character;
     const doc = this.setupDoc();
-    doc.setFont(this._font, 'normal');
-    doc.setFontSize(this._fontSize);
     this.createFirstPage(doc);
     this.createSecondPage(doc);
     this.createThirdPage(doc);
@@ -38,10 +38,12 @@ export class Cp2020characterToPDF {
       format: 'a4',
       unit: 'mm'
     });
-     // verify that Arial is a font.
-     this._font = this.getFont(doc.getFontList());
-    doc.setFont(this._font);
-    doc.setFontSize(this._fontSize);
+    // verify that Arial is a font.
+     doc.addFileToVFS('PTSans.ttf', str);
+    doc.addFont('PTSans.ttf', 'PTSans', 'normal');
+    doc.setFont('PTSans');
+    // doc.setFont(this._font);
+    // doc.setFontSize(this._fontSize);
    return doc;
   }
 
@@ -92,7 +94,10 @@ export class Cp2020characterToPDF {
     doc.setFillColor('black');
     doc.rect(this._left, this._top, 200, 7, 'DF');
     doc.setTextColor('white');
-    doc.setFont(this._font, 'bold');
+    // doc.addFileToVFS('PTSans.ttf', PTSans);
+    doc.addFont('PTSans.ttf', 'PTSans', 'normal');
+    doc.setFont('PTSans');
+    // doc.setFont(this._font, 'bold');
     doc.text('LIFEPATH, GEAR, & WEAPONS', this._left + 2, this._top + 5);
     doc.setTextColor('black');
     doc.setFont(this._font, 'normal');
@@ -107,7 +112,9 @@ export class Cp2020characterToPDF {
     doc.setFillColor('black');
     doc.rect(this._left, this._top, 200, 7, 'DF');
     doc.setTextColor('white');
-    doc.setFont(this._font, 'bold');
+    // doc.addFileToVFS('PTSans.ttf', PTSans);
+    doc.addFont('PTSans.ttf', 'PTSans', 'normal');
+    doc.setFont('PTSans');
     doc.text('HISTORY & NOTES', this._left + 2, this._top + 5);
     doc.setTextColor('black');
     doc.setFont(this._font, 'normal');
@@ -139,7 +146,10 @@ private addRole(doc: jsPDF, role: string, line: number) {
   let rw = 22;
   doc.rect(this._left, line, rw, this._lineheight, 'DF');
   doc.setTextColor('white');
-  doc.setFont(this._font, 'bold');
+  // doc.setFont(this._font, 'bold');
+  // doc.addFileToVFS('PTSans.ttf', PTSans);
+  doc.addFont('PTSans.ttf', 'PTSans', 'normal');
+  doc.setFont('PTSans');
   doc.text('ROLE:', this._left + 3, line + 5);
   rw = this._left + rw;
   doc.rect(rw, line, 70, this._lineheight, 'S');
@@ -152,7 +162,10 @@ private addCharImage(doc: jsPDF) {
   doc.setTextColor('black');
   doc.rect(this._midPage, this._top, 100, 10, 'DF');
   doc.setTextColor('white');
-  doc.setFont(this._font, 'bold');
+  // doc.setFont(this._font, 'bold');
+  // doc.addFileToVFS('PTSans.ttf', PTSans);
+  doc.addFont('PTSans.ttf', 'PTSans', 'normal');
+  doc.setFont('PTSans');
   doc.setFontSize(15);
   doc.text('CYBERPUNK 2020', this._midPage + 20, this._top + 6);
   doc.roundedRect(this._midPage, this._top + 10, 100, 80, 0.5, 0.5, 'S');
@@ -164,7 +177,10 @@ private addStats(doc: jsPDF, stats: Cp2020StatBlock, line: number): number {
   doc.setFillColor('black');
   doc.rect(this._left, line, 20, this._lineheight, 'DF');
   doc.setTextColor('white');
-  doc.setFont(this._font, 'bold');
+  // doc.setFont(this._font, 'bold');
+  // doc.addFileToVFS('PTSans.ttf', PTSans);
+  doc.addFont('PTSans.ttf', 'PTSans', 'normal');
+  doc.setFont('PTSans');
   doc.text('STATS', this._left + 3, line + 5);
   doc.rect(this._left + 20, line, 15, this._lineheight, 'S');
   doc.setTextColor('black');
@@ -253,7 +269,10 @@ private addWoundRow(doc: jsPDF, save: number, btm: number, line: number): number
   doc.text('BTM', left + 2, line + 5);
   doc.rect(left, line + this._lineheight, 13, 15, 'S');
   doc.text(btm.toString(), left + 4, line + this._lineheight + 8);
-  doc.setFont(this._font, 'normal');
+  // doc.addFileToVFS('PTSans.ttf', PTSans);
+  doc.addFont('PTSans.ttf', 'PTSans', 'normal');
+  doc.setFont('PTSans');
+  // doc.setFont(this._font, 'normal');
   const woundWidth = 12;
   this.addWounds(doc, 'LIGHT', 0, line + 2, left + 14, woundWidth);
   this.addWounds(doc, 'SERIOUS', -1, line + 2, left + 26, woundWidth);
@@ -290,7 +309,10 @@ private addSkills(doc: jsPDF, sa: Cp2020PlayerSkill, skills: Cp2020PlayerSkills,
   doc.setFillColor('black');
   doc.rect(this._left, line, 22, this._lineheight, 'DF');
   doc.setTextColor('white');
-  doc.setFont(this._font, 'bold');
+  // doc.setFont(this._font, 'bold');
+  doc.addFileToVFS('PTSans.ttf', str);
+  doc.addFont('PTSans.ttf', 'PTSans', 'normal');
+  doc.setFont('PTSans');
   doc.text('SKILLS', left + 3, line + 5);
   doc.setTextColor('black');
   doc.setFont(this._font, 'normal');
@@ -335,7 +357,10 @@ private addSkills(doc: jsPDF, sa: Cp2020PlayerSkill, skills: Cp2020PlayerSkills,
   doc.setFontSize(9);
   doc.setFont(this._font, 'bold');
   doc.text('REP', col, line + 4);
-  doc.setFont(this._font, 'normal');
+  // doc.setFont(this._font, 'normal');
+  doc.addFileToVFS('PTSans.ttf', str);
+  doc.addFont('PTSans.ttf', 'PTSans', 'normal');
+  doc.setFont('PTSans');
   doc.text(skills.rep.toString(), col + 40, line + 4);
   line += 6;
   doc.setFont(this._font, 'bold');
@@ -370,7 +395,10 @@ private addCyberware(doc: jsPDF, cyber: Cp2020PlayerCyberList, left: number, lin
   doc.setFillColor('black');
   doc.rect(left, line, 100, 7, 'DF');
   doc.setTextColor('white');
-  doc.setFont(this._font, 'bold');
+  // doc.setFont(this._font, 'bold');
+  doc.addFileToVFS('PTSans.ttf', str);
+  doc.addFont('PTSans.ttf', 'PTSans', 'normal');
+  doc.setFont('PTSans');
   doc.text('CYBERNETICS', left + 2, line + 5);
   doc.setTextColor('black');
   doc.setFont(this._font, 'normal');
@@ -415,10 +443,16 @@ private addGear(doc: jsPDF, gear: Cp2020PlayerGearList, left: number, line: numb
   doc.setFillColor('black');
   doc.rect(left, line, 100, 7, 'DF');
   doc.setTextColor('white');
-  doc.setFont(this._font, 'bold');
+  // doc.setFont(this._font, 'bold');
+  // doc.addFileToVFS('PTSans.ttf', PTSans);
+  doc.addFont('PTSans.ttf', 'PTSans', 'normal');
+  doc.setFont('PTSans');
   doc.text('GEAR', left + 2, line + 5);
   doc.setTextColor('black');
-  doc.setFont(this._font, 'normal');
+  // doc.setFont(this._font, 'normal');
+  // doc.addFileToVFS('PTSans.ttf', PTSans);
+  doc.addFont('PTSans.ttf', 'PTSans', 'normal');
+  doc.setFont('PTSans');
   line += 7;
   doc.setFontSize(9);
   const ht = 6;

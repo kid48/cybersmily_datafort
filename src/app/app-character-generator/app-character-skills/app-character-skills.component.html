@@ -9,7 +9,7 @@
   </div>
   <div class="row print-fix">
     <div class="col-sm-6 col-md-3 chargen-skills">
-      <div class="chargen-skill-stat">SPECIAL ABILITIES</div>
+      <div class="chargen-skill-stat">КЛАССОВОЕ УМЕНИЕ</div>
       <div class="row">
         <div [ngClass]="{'col-12':true, 'chargen-skill-misc': true, 'chargen-skill-sa': (role.specialAbility.name != '')}">
           <cs-app-character-skill [skill]="role.specialAbility"
@@ -75,7 +75,7 @@
                 class="chargen-skill-input" (change)="onChangeSkill()"/>]</span></div>
           <div class="chargen-skill-misc">IP<span class="pull-right">[<input [(ngModel)]="skills.ip" type="number"
                 class="chargen-skill-input" (change)="onChangeSkill()" />]</span></div>
-          <div class="chargen-skill-misc">HUMANITY<span class="pull-right">[{{stats.CurrentHumanity}}]</span></div>
+          <div class="chargen-skill-misc">Человечность<span class="pull-right">[{{stats.CurrentHumanity}}]</span></div>
         </div>
       </div>
       <div class="row  print-fix">
