@@ -10,6 +10,7 @@ import { str } from './PTSans';
 
 
 import {jsPDF} from 'jspdf';
+import { stringify } from '@angular/compiler/src/util';
 
 export class Cp2020characterToPDF {
   private _character: Cp2020PlayerCharacter;
@@ -42,8 +43,6 @@ export class Cp2020characterToPDF {
      doc.addFileToVFS('PTSans.ttf', str);
     doc.addFont('PTSans.ttf', 'PTSans', 'normal');
     doc.setFont('PTSans');
-    // doc.setFont(this._font);
-    // doc.setFontSize(this._fontSize);
    return doc;
   }
 
@@ -94,13 +93,13 @@ export class Cp2020characterToPDF {
     doc.setFillColor('black');
     doc.rect(this._left, this._top, 200, 7, 'DF');
     doc.setTextColor('white');
-    // doc.addFileToVFS('PTSans.ttf', PTSans);
+    doc.addFileToVFS('PTSans.ttf', str);
     doc.addFont('PTSans.ttf', 'PTSans', 'normal');
     doc.setFont('PTSans');
-    // doc.setFont(this._font, 'bold');
+    doc.setFont('PTSans');
     doc.text('LIFEPATH, GEAR, & WEAPONS', this._left + 2, this._top + 5);
     doc.setTextColor('black');
-    doc.setFont(this._font, 'normal');
+    doc.setFont('PTSans', 'normal');
 
     this.addLifePath(doc, this._character.lifepath, this._left, this._top + 10);
     this.addGear(doc, this._character.gear, this._midPage, this._top + 10);
@@ -112,12 +111,11 @@ export class Cp2020characterToPDF {
     doc.setFillColor('black');
     doc.rect(this._left, this._top, 200, 7, 'DF');
     doc.setTextColor('white');
-    // doc.addFileToVFS('PTSans.ttf', PTSans);
+    doc.addFileToVFS('PTSans.ttf', str);
     doc.addFont('PTSans.ttf', 'PTSans', 'normal');
     doc.setFont('PTSans');
-    doc.text('HISTORY & NOTES', this._left + 2, this._top + 5);
+    doc.text('ЗАМЕТКИ', this._left + 2, this._top + 5);
     doc.setTextColor('black');
-    doc.setFont(this._font, 'normal');
     doc.rect(this._left, this._top, 200, this._pageHeight - this._top, 'S');
     const notes: Array<string> = doc.splitTextToSize(this._character.notes, 190);
     let line = this._top + 13;
@@ -132,12 +130,14 @@ export class Cp2020characterToPDF {
     let rw = 22;
     doc.rect(this._left, line, rw, this._lineheight, 'DF');
     doc.setTextColor('white');
-    doc.setFont(this._font, 'bold');
-    doc.text('HANDLE:', this._left + 3, line + 5);
+    doc.addFileToVFS('PTSans.ttf', str);
+    doc.addFont('PTSans.ttf', 'PTSans', 'normal');
+    doc.setFont('PTSans', 'normal');
+    doc.text('ИМЯ:', this._left + 3, line + 5);
     rw = this._left + rw;
     doc.rect(rw, line, 70, this._lineheight, 'S');
     doc.setTextColor('black');
-    doc.setFont(this._font, 'normal');
+    doc.setFont('PTSans', 'normal');
     doc.text(handle, rw + 1, line + 5);
   }
 
@@ -146,15 +146,14 @@ private addRole(doc: jsPDF, role: string, line: number) {
   let rw = 22;
   doc.rect(this._left, line, rw, this._lineheight, 'DF');
   doc.setTextColor('white');
-  // doc.setFont(this._font, 'bold');
-  // doc.addFileToVFS('PTSans.ttf', PTSans);
+  doc.addFileToVFS('PTSans.ttf', str);
   doc.addFont('PTSans.ttf', 'PTSans', 'normal');
   doc.setFont('PTSans');
-  doc.text('ROLE:', this._left + 3, line + 5);
+  doc.text('РОЛЬ:', this._left + 3, line + 5);
   rw = this._left + rw;
   doc.rect(rw, line, 70, this._lineheight, 'S');
   doc.setTextColor('black');
-  doc.setFont(this._font, 'normal');
+  doc.setFont('PTSans', 'normal');
   doc.text(role, rw + 1, line + 5);
 }
 
@@ -162,7 +161,6 @@ private addCharImage(doc: jsPDF) {
   doc.setTextColor('black');
   doc.rect(this._midPage, this._top, 100, 10, 'DF');
   doc.setTextColor('white');
-  // doc.setFont(this._font, 'bold');
   // doc.addFileToVFS('PTSans.ttf', PTSans);
   doc.addFont('PTSans.ttf', 'PTSans', 'normal');
   doc.setFont('PTSans');
@@ -177,15 +175,14 @@ private addStats(doc: jsPDF, stats: Cp2020StatBlock, line: number): number {
   doc.setFillColor('black');
   doc.rect(this._left, line, 20, this._lineheight, 'DF');
   doc.setTextColor('white');
-  // doc.setFont(this._font, 'bold');
   // doc.addFileToVFS('PTSans.ttf', PTSans);
   doc.addFont('PTSans.ttf', 'PTSans', 'normal');
   doc.setFont('PTSans');
-  doc.text('STATS', this._left + 3, line + 5);
+  doc.text('СТАТЫ', this._left + 3, line + 5);
   doc.rect(this._left + 20, line, 15, this._lineheight, 'S');
   doc.setTextColor('black');
   doc.setFillColor('white');
-  doc.setFont(this._font, 'normal');
+  doc.setFont('PTSans', 'normal');
   doc.text(stats.BasePoints.toString(), this._left + 23, line + 5);
 
 
@@ -211,7 +208,7 @@ private addArmorBlock(doc: jsPDF, armor: Cp2020ArmorBlock, line: number): number
   const rowHeight = 9;
   doc.rect(this._left, line, width, rowHeight, 'DF');
   doc.setTextColor('white');
-  doc.text('Location', this._left + 3, line + 5);
+  doc.text('Расположене', this._left + 3, line + 5);
   doc.setTextColor('black');
   doc.rect(this._left + width, line, colWidth, 9, 'S');
   doc.rect(this._left + width + (colWidth * 1), line, colWidth, rowHeight, 'S');
@@ -223,12 +220,12 @@ private addArmorBlock(doc: jsPDF, armor: Cp2020ArmorBlock, line: number): number
   doc.setFontSize(9);
   let textLine = line + 4;
   let textLeft =  this._left + width + 1;
-  doc.text('Head\n   1', textLeft, textLine);
-  doc.text('Torso\n  2-4', textLeft + (colWidth * 1), textLine);
-  doc.text('R.Arm\n   5', textLeft + (colWidth * 2), textLine);
-  doc.text('L.Arm\n   6', textLeft + (colWidth * 3), textLine);
-  doc.text('R.Leg\n  7-8', textLeft + (colWidth * 4), textLine);
-  doc.text('L.Leg\n  9-0', textLeft + (colWidth * 5), textLine);
+  doc.text('Голова\n   1', textLeft, textLine);
+  doc.text('Торс\n  2-4', textLeft + (colWidth * 1), textLine);
+  doc.text('Пр.Рука\n   5', textLeft + (colWidth * 2), textLine);
+  doc.text('Л.Рука\n   6', textLeft + (colWidth * 3), textLine);
+  doc.text('Пр.Нога\n  7-8', textLeft + (colWidth * 4), textLine);
+  doc.text('Л.Нога\n  9-0', textLeft + (colWidth * 5), textLine);
   doc.setFontSize(this._fontSize);
 
   line = line + 10;
@@ -269,10 +266,8 @@ private addWoundRow(doc: jsPDF, save: number, btm: number, line: number): number
   doc.text('BTM', left + 2, line + 5);
   doc.rect(left, line + this._lineheight, 13, 15, 'S');
   doc.text(btm.toString(), left + 4, line + this._lineheight + 8);
-  // doc.addFileToVFS('PTSans.ttf', PTSans);
   doc.addFont('PTSans.ttf', 'PTSans', 'normal');
   doc.setFont('PTSans');
-  // doc.setFont(this._font, 'normal');
   const woundWidth = 12;
   this.addWounds(doc, 'LIGHT', 0, line + 2, left + 14, woundWidth);
   this.addWounds(doc, 'SERIOUS', -1, line + 2, left + 26, woundWidth);
@@ -309,13 +304,12 @@ private addSkills(doc: jsPDF, sa: Cp2020PlayerSkill, skills: Cp2020PlayerSkills,
   doc.setFillColor('black');
   doc.rect(this._left, line, 22, this._lineheight, 'DF');
   doc.setTextColor('white');
-  // doc.setFont(this._font, 'bold');
   doc.addFileToVFS('PTSans.ttf', str);
   doc.addFont('PTSans.ttf', 'PTSans', 'normal');
   doc.setFont('PTSans');
-  doc.text('SKILLS', left + 3, line + 5);
+  doc.text('НАВЫКИ', left + 3, line + 5);
   doc.setTextColor('black');
-  doc.setFont(this._font, 'normal');
+  doc.setFont('PTSans', 'normal');
   doc.setFontSize(6);
   doc.text('Skills show level| level + stat in box []. X next to box is chipped', left + 23, line + 3);
   line += 7;
@@ -323,7 +317,7 @@ private addSkills(doc: jsPDF, sa: Cp2020PlayerSkill, skills: Cp2020PlayerSkills,
   let col = left;
   const startLine = line + 4;
   doc.setFontSize(9);
-  doc.text('SPECIAL ABILITY', left, startLine);
+  doc.text('СПЕЦ СПОСОБНОСТЬ', left, startLine);
   line += 7;
   doc.setFontSize(8);
   doc.text(sa.name, col, line);
@@ -355,22 +349,21 @@ private addSkills(doc: jsPDF, sa: Cp2020PlayerSkill, skills: Cp2020PlayerSkills,
   line = startLine;
   line = this.printSkills(doc, skills.Other, '', 0, line, col);
   doc.setFontSize(9);
-  doc.setFont(this._font, 'bold');
+  doc.setFont('PTSans');
   doc.text('REP', col, line + 4);
-  // doc.setFont(this._font, 'normal');
   doc.addFileToVFS('PTSans.ttf', str);
   doc.addFont('PTSans.ttf', 'PTSans', 'normal');
   doc.setFont('PTSans');
   doc.text(skills.rep.toString(), col + 40, line + 4);
   line += 6;
-  doc.setFont(this._font, 'bold');
+  doc.setFont('PTSans');
   doc.text('CURRENT IP', col, line + 4);
-  doc.setFont(this._font, 'normal');
+  doc.setFont('PTSans', 'normal');
   doc.text(skills.ip.toString(), col + 40, line + 4);
   line += 6;
-  doc.setFont(this._font, 'bold');
+  doc.setFont('PTSans');
   doc.text('HUMANITY', col, line + 4);
-  doc.setFont(this._font, 'normal');
+  doc.setFont('PTSans', 'normal');
   doc.text(stats.CurrentHumanity.toString(), col + 40, line + 4);
   line += 6;
 }
@@ -395,13 +388,12 @@ private addCyberware(doc: jsPDF, cyber: Cp2020PlayerCyberList, left: number, lin
   doc.setFillColor('black');
   doc.rect(left, line, 100, 7, 'DF');
   doc.setTextColor('white');
-  // doc.setFont(this._font, 'bold');
   doc.addFileToVFS('PTSans.ttf', str);
   doc.addFont('PTSans.ttf', 'PTSans', 'normal');
   doc.setFont('PTSans');
-  doc.text('CYBERNETICS', left + 2, line + 5);
+  doc.text('КИБЕРНЕТИКА', left + 2, line + 5);
   doc.setTextColor('black');
-  doc.setFont(this._font, 'normal');
+  doc.setFont('PTSans', 'normal');
   line += 7;
   doc.setFontSize(8);
   const ht = 6;
@@ -409,9 +401,9 @@ private addCyberware(doc: jsPDF, cyber: Cp2020PlayerCyberList, left: number, lin
   doc.rect(left, line, 80, ht, 'S');
   doc.rect(left + 80, line, 10, ht, 'S');
   doc.rect(left + 90, line, 10, ht, 'S');
-  doc.text('Type', left + 2, line + 4);
+  doc.text('ТИП', left + 2, line + 4);
   doc.text('HL', left + 81, line + 4);
-  doc.text('Cost', left + 91, line + 4);
+  doc.text('ЦЕНА', left + 91, line + 4);
   line += ht;
   cyber.items.forEach(c => {
     let cyberName = new Array<string>();
@@ -434,7 +426,7 @@ private addCyberware(doc: jsPDF, cyber: Cp2020PlayerCyberList, left: number, lin
   doc.rect(left, line, 80, ht, 'S');
   doc.rect(left + 80, line, 10, ht, 'S');
   doc.rect(left + 90, line, 10, ht, 'S');
-  doc.text('Total HL and Cost', left + 2, line + 4);
+  doc.text('ВСЕГО', left + 2, line + 4);
   doc.text((cyber.totalHL) ? cyber.totalHL.toString()  : '', left + 81, line + 4);
   doc.text(cyber.totalCost ? cyber.totalCost.toLocaleString('en') : '', left + 91, line + 4);
 }
@@ -443,14 +435,10 @@ private addGear(doc: jsPDF, gear: Cp2020PlayerGearList, left: number, line: numb
   doc.setFillColor('black');
   doc.rect(left, line, 100, 7, 'DF');
   doc.setTextColor('white');
-  // doc.setFont(this._font, 'bold');
-  // doc.addFileToVFS('PTSans.ttf', PTSans);
   doc.addFont('PTSans.ttf', 'PTSans', 'normal');
   doc.setFont('PTSans');
-  doc.text('GEAR', left + 2, line + 5);
+  doc.text('СНАРЯЖЕНИЕ', left + 2, line + 5);
   doc.setTextColor('black');
-  // doc.setFont(this._font, 'normal');
-  // doc.addFileToVFS('PTSans.ttf', PTSans);
   doc.addFont('PTSans.ttf', 'PTSans', 'normal');
   doc.setFont('PTSans');
   line += 7;
@@ -460,9 +448,9 @@ private addGear(doc: jsPDF, gear: Cp2020PlayerGearList, left: number, line: numb
   doc.rect(left, line, 80, ht, 'S');
   doc.rect(left + 80, line, 10, ht, 'S');
   doc.rect(left + 90, line, 10, ht, 'S');
-  doc.text('type', left + 2, line + 4);
-  doc.text('Cost', left + 81, line + 4);
-  doc.text('Wt', left + 91, line + 4);
+  doc.text('Тип', left + 2, line + 4);
+  doc.text('ЦЕНА', left + 81, line + 4);
+  doc.text('ВЕС', left + 91, line + 4);
   line += ht;
   gear.items.forEach(g => {
     doc.rect(left, line, 80, ht, 'S');
@@ -475,56 +463,56 @@ private addGear(doc: jsPDF, gear: Cp2020PlayerGearList, left: number, line: numb
     doc.text(wt, left + 91, line + 4);
     line += ht;
   });
-  doc.setFontSize(this._fontSize);
+  doc.setFont('PTSans', 'normal');
 }
 
 private addWeapons(doc: jsPDF, weapons: CpPlayerWeaponList, left: number, line: number) {
   doc.setFillColor('black');
   doc.rect(left, line, 100, 7, 'DF');
   doc.setTextColor('white');
-  doc.setFont(this._font, 'bold');
-  doc.text('WEAPONS', left + 2, line + 5);
+  doc.setFont('PTSans');
+  doc.text('ОРУЖИЕ', left + 2, line + 5);
   doc.setTextColor('black');
-  doc.setFont(this._font, 'normal');
+  doc.setFont('PTSans', 'normal');
   doc.setFontSize(7);
   const ht = 5;
   const leftMargin = left;
   line += 7;
   // header
   doc.rect(left, line, 30, ht, 'S');
-  doc.text('Name', left + 1, line + 4);
+  doc.text('Название', left + 1, line + 4);
   left += 30;
 
   doc.rect(left, line, 8, ht, 'S');
-  doc.text('type', left +  0.5, line + 4);
+  doc.text('Тип', left +  0.5, line + 4);
   left += 8;
 
   doc.rect(left, line, 8, ht, 'S');
-  doc.text('WA', left +  0.5, line + 4);
+  doc.text('Точн', left +  0.5, line + 4);
   left += 8;
 
   doc.rect(left, line, 8, ht, 'S');
-  doc.text('Conc.', left +  0.5, line + 4);
+  doc.text('Скр.', left +  0.5, line + 4);
   left += 8;
 
   doc.rect(left, line, 8, ht, 'S');
-  doc.text('Avail.', left +  0.5, line + 4);
+  doc.text('Дост.', left +  0.5, line + 4);
   left += 8;
 
   doc.rect(left, line, 12, ht, 'S');
-  doc.text('Dam.', left +  0.5, line + 4);
+  doc.text('Урон', left +  0.5, line + 4);
   left += 12;
 
   doc.rect(left, line, 10, ht, 'S');
-  doc.text('#Shots', left + 0.5, line + 4);
+  doc.text('Патр.', left + 0.5, line + 4);
   left += 10;
 
   doc.rect(left, line, 9, ht, 'S');
-  doc.text('ROF', left + 0.5, line + 4);
+  doc.text('Скор.', left + 0.5, line + 4);
   left += 9;
 
   doc.rect(left, line, 7, ht, 'S');
-  doc.text('Rel', left + 0.5, line + 4);
+  doc.text('Над.', left + 0.5, line + 4);
   left += 7;
 
   line += ht;
@@ -607,53 +595,55 @@ private addLifePath(doc: jsPDF, lifepath: LifePathResults, left: number, line: n
   doc.rect(left, line, 90, this._pageHeight - line, 'S');
   const ht = 6.5;
   const recth = 6;
-  doc.setFont(this._font, 'bold');
-  doc.text('LIFEPATH', left + 2, line + 5);
+  doc.addFileToVFS('PTSans.ttf', str);
+  doc.addFont('PTSans.ttf', 'PTSans', 'normal');
+  doc.setFont('PTSans');
+  doc.text('ЖИЗН ПУТЬ', left + 2, line + 5);
   doc.setFillColor('black');
   line += ht;
   // Style
   doc.rect(left, line, 20, recth, 'FD');
   doc.setTextColor('white');
-  doc.text('Style', left + 2, line + 4);
+  doc.text('Стиль', left + 2, line + 4);
   doc.setTextColor('black');
   line += ht;
-  doc.text('Clothes', left + 5, line + 5);
-  doc.setFont(this._font, 'normal');
+  doc.text('Одежда', left + 5, line + 5);
+  doc.setFont('PTSans', 'normal');
   doc.text(lifepath.appearance.clothes, left + 20, line + 5);
   line += ht;
-  doc.setFont(this._font, 'bold');
-  doc.text('Hair', left + 5, line + 5);
-  doc.setFont(this._font, 'normal');
+  doc.setFont('PTSans');
+  doc.text('Волосы', left + 5, line + 5);
+  doc.setFont('PTSans', 'normal');
   doc.text(lifepath.appearance.hairstyle, left + 17, line + 5);
   line += ht;
-  doc.setFont(this._font, 'bold');
+  doc.setFont('PTSans');
   doc.text('Affectations', left + 5, line + 5);
-  doc.setFont(this._font, 'normal');
+  doc.setFont('PTSans', 'normal');
   doc.text(lifepath.appearance.affectations, left + 25, line + 5);
   line += ht;
-  doc.setFont(this._font, 'bold');
-  doc.text('Ethnicity', left + 5, line + 5);
-  doc.setFont(this._font, 'normal');
+  doc.setFont('PTSans');
+  doc.text('Этнос', left + 5, line + 5);
+  doc.setFont('PTSans', 'normal');
   doc.text(lifepath.ethnicity.name, left + 20, line + 5);
   line += ht;
-  doc.setFont(this._font, 'bold');
-  doc.text('Language', left + 5, line + 5);
-  doc.setFont(this._font, 'normal');
+  doc.setFont('PTSans');
+  doc.text('Язык', left + 5, line + 5);
+  doc.setFont('PTSans', 'normal');
   doc.text(lifepath.ethnicity.language, left + 22, line + 5);
   line += ht;
 
   // Family
-  doc.setFont(this._font, 'bold');
+  doc.setFont('PTSans');
   doc.setFillColor('black');
   doc.rect(left, line, 40, recth, 'FD');
   doc.setTextColor('white');
-  doc.text('Family Background', left + 2, line + 4);
+  doc.text('Семейная предыстория', left + 2, line + 4);
   doc.setTextColor('black');
 
   line += ht;
-  doc.setFont(this._font, 'normal');
+  doc.setFont('PTSans', 'normal');
   if ( lifepath.family.familyRanking && lifepath.family.familyRanking !== '') {
-    doc.text('Ranking: ' + lifepath.family.familyRanking, left + 5, line + 4);
+    doc.text('Рейтинг: ' + lifepath.family.familyRanking, left + 5, line + 4);
   }
   line += ht;
   let fam = new Array<string>();
@@ -667,13 +657,13 @@ private addLifePath(doc: jsPDF, lifepath: LifePathResults, left: number, line: n
     line += ht;
   }
 
-  doc.setFont(this._font, 'bold');
+  doc.setFont('PTSans');
   doc.setFillColor('black');
   doc.rect(left, line, 25, recth, 'FD');
   doc.setTextColor('white');
-  doc.text('# Siblings', left + 2, line + 4);
+  doc.text('# Братья и сёстры', left + 2, line + 4);
   doc.setTextColor('black');
-  doc.setFont(this._font, 'normal');
+  doc.setFont('PTSans', 'normal');
   const bro = lifepath.family.siblings.getBrothersCount().toString();
   const sis = lifepath.family.siblings.getSistersCount().toString();
   doc.text(
@@ -683,39 +673,41 @@ private addLifePath(doc: jsPDF, lifepath: LifePathResults, left: number, line: n
   line += ht;
 
   // Motivations
+  doc.addFileToVFS('PTSans.ttf', str);
+  doc.addFont('PTSans.ttf', 'PTSans', 'normal');
   doc.setFillColor('black');
+  doc.setFont('PTSans');
   doc.rect(left, line, 25, recth, 'FD');
   doc.setTextColor('white');
-  doc.text('Motivations', left + 2, line + 4);
+  doc.text('Мотивы', left + 2, line + 4);
   doc.setTextColor('black');
   line += ht;
-  doc.text('Traits: ', left + 5, line + 5);
-  doc.setFont(this._font, 'normal');
+  doc.text('Черты характера: ', left + 5, line + 5);
+  doc.setFont('PTSans', 'normal');
   doc.text(lifepath.motivations.personality, left + 18, line + 5);
   line += ht;
-  doc.setFont(this._font, 'bold');
-  doc.text('Valued Person: ', left + 5, line + 5);
-  doc.setFont(this._font, 'normal');
+  doc.setFont('PTSans');
+  doc.text('Ценный человек: ', left + 5, line + 5);
+  doc.setFont('PTSans', 'normal');
   doc.text(lifepath.motivations.valuedperson, left + 28, line + 5);
   line += ht;
-  doc.setFont(this._font, 'bold');
-  doc.text('Value Most: ', left + 5, line + 5);
-  doc.setFont(this._font, 'normal');
+  doc.setFont('PTSans');
+  doc.text('Ценишь больше всего: ', left + 5, line + 5);
+  doc.setFont('PTSans', 'normal');
   doc.text(lifepath.motivations.valuemost, left + 23, line + 5);
   line += ht;
   const feel = (lifepath.motivations.feelaboutpeople.length > 30) ?
     lifepath.motivations.feelaboutpeople.substring(0, 30) + '...' : lifepath.motivations.feelaboutpeople;
-    doc.setFont(this._font, 'bold');
-  doc.text('Feel About People: ', left + 5, line + 5);
-  doc.setFont(this._font, 'normal');
+    doc.setFont('PTSans');
+  doc.text('Чуства к другим людям: ', left + 5, line + 5);
+  doc.setFont('PTSans');
   doc.text(feel, left + 35, line + 5);
   line += ht;
-  doc.setFont(this._font, 'bold');
-  doc.text('Valued Possesion: ', left + 5, line + 5);
-  doc.setFont(this._font, 'normal');
+  doc.setFont('PTSans');
+  doc.text('Ценное увлечение: ', left + 5, line + 5);
+  doc.setFont('PTSans');
   doc.text(lifepath.motivations.valuedpossession, left + 35, line + 5);
   line += ht;
-  doc.setFont(this._font, 'bold');
 
   // Life Events
   doc.rect(left, line, 25, recth, 'FD');
@@ -724,12 +716,14 @@ private addLifePath(doc: jsPDF, lifepath: LifePathResults, left: number, line: n
   doc.setTextColor('black');
   line += ht;
   doc.setFontSize(8);
-  doc.setFont(this._font, 'normal');
+  doc.addFileToVFS('PTSans.ttf', str);
+  doc.addFont('PTSans.ttf', 'PTSans', 'normal');
+  doc.setFont('PTSans')
   doc.setTextColor('black');
   doc.rect(left, line, 10, recth, 'S');
-  doc.text('YEAR', left + 1, line + 5);
+  doc.text('ГОД', left + 1, line + 5);
   doc.rect(left + 10, line, 80, recth, 'S');
-  doc.text('EVENT', left + 12, line + 5);
+  doc.text('СОБЫТИЕ', left + 12, line + 5);
   line += ht;
   lifepath.events.forEach( e => {
     if (e.event && e.event.trim() !== '') {
@@ -753,8 +747,9 @@ private addLifePath(doc: jsPDF, lifepath: LifePathResults, left: number, line: n
     }
   });
 
-
-  doc.setFont(this._font, 'normal');
+  doc.addFileToVFS('PTSans.ttf', str);
+  doc.addFont('PTSans.ttf', 'PTSans', 'normal');
+  doc.setFont('PTSans')
 }
 
 }
