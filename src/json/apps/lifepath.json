@@ -15,38 +15,38 @@
 	],
 	"origins":{
 		"CP2020": [
-	        {"name":"Anglo-American", "languages": ["English"]},
+	        {"name":"Англо-американец", "languages": ["Английский"]},
 	        {"name":"African", "languages":["Bantu","Fante","Kongo","Ashanti","Zulu","Swahili"]},
-	        {"name":"Japanese/Korean", "languages": ["Japanese","Korean"]},
+	        {"name":"Японский/Korean", "languages": ["Японский","Korean"]},
 	        {"name":"Central European/Soviet", "languages": ["Bulgarian","Russian","Czech","Polish","Ukranian","Slovek"]},
 	        {"name":"Pacific Islander", "languages": ["Microneasian","Tagalog","Polynesian","Malayan","Sudanese","Indonesian","Hawaiian"]},
 	        {"name":"Chinese/Southeast Asian", "languages": ["Burmese","Cantonese","Mandarin","Thai","Tibetan","Vietnamese"]},
-	        {"name":"Black American", "languages": ["English","Blackfolk"]},
-	        {"name":"Hispanic American", "languages": ["Spanish","English"]},
-	        {"name":"Central American/South American", "languages": ["Spanish","Portuguese"]},
-	        {"name":"European", "languages": ["French","German","English","Spanish","Italian","Greek","Danish","Dutch","Norwegian","Swedish","Finnish"]}
+	        {"name":"Black American", "languages": ["Английский","Блэкфолк"]},
+	        {"name":"Hispanic American", "languages": ["Spanish","Английский"]},
+	        {"name":"Central American/South American", "languages": ["Spanish","Португальский"]},
+	        {"name":"Европеец", "languages": ["Французкий","Немецкий","Английский","Spanish","Итальянский","Греческий","Датский","Нидерландский","Норвежский","Шведский","Финский"]}
 
     ],
 	    "NeoTribe": [
-          {"name":"Hispanic", "languages": ["Spanish","English"]},
-	        {"name":"Romany", "languages": ["English","Romani"]},
-	        {"name":"African American", "languages": ["English","Blackfolk"]},
-	        {"name":"European", "languages": ["French","German","English","Spanish","Italian","Greek","Danish","Dutch","Norwegian","Swedish","Finnish"]},
-	        {"name":"Cultural-American", "languages": ["English"]},
-	        {"name":"Native-American", "languages": ["English","Siouan-Catawban","Uto-Aztecan","Iroquoian","Muskogean","Algic","Caddoan","Na-Dene","Kiowa-Tanoan","Salishan"]},
-	        {"name":"Caribean", "languages": ["Spanish","English"]},
-	        {"name":"Asian", "languages": ["Japanese","Korean","Burmese","Cantonese","Mandarin","Thai","Tibetan","Vietnamese"]},
-			    {"name":"Other", "languages": ["Spanish","Portuguese","Microneasian","Tagalog","Polynesian","Malayan","Sudanese","Indonesian","Hawaiian","Bantu","Fante","Kongo","Ashanti","Zulu","Swahili","Bulgarian","Russian","Czech","Polish","Ukranian","Slovek"]},
+          {"name":"Hispanic", "languages": ["Spanish","Английский"]},
+	        {"name":"Romany", "languages": ["Английский","Цыганский"]},
+	        {"name":"African American", "languages": ["Английский","Блэкфолк"]},
+	        {"name":"Европеец", "languages": ["Французкий","Немецкий","Английский","Spanish","Итальянский","Греческий","Датский","Нидерландский","Норвежский","Шведский","Финский"]},
+	        {"name":"Cultural-American", "languages": ["Английский"]},
+	        {"name":"Native-American", "languages": ["Английский","Siouan-Catawban","Uto-Aztecan","Iroquoian","Muskogean","Algic","Caddoan","Na-Dene","Kiowa-Tanoan","Salishan"]},
+	        {"name":"Caribean", "languages": ["Spanish","Английский"]},
+	        {"name":"Asian", "languages": ["Японский","Korean","Burmese","Cantonese","Mandarin","Thai","Tibetan","Vietnamese"]},
+			    {"name":"Other", "languages": ["Spanish","Португальский","Microneasian","Tagalog","Polynesian","Malayan","Sudanese","Indonesian","Hawaiian","Bantu","Fante","Kongo","Ashanti","Zulu","Swahili","Bulgarian","Russian","Czech","Polish","Ukranian","Slovek"]},
 	        {"name":"Polygot", "languages": ["Roll 2"]}
       ],
 		"PacRimJapan":[
-      {"name":"Japanese", "languages":["Japanese","English"]},
-      {"name":"Korean", "languages":["Japanese","Korean","English"]},
-      {"name":"South American", "languages":["Japanese","Portuguese","English"]}
+      {"name":"Японский", "languages":["Японский","Английский"]},
+      {"name":"Korean", "languages":["Японский","Korean","Английский"]},
+      {"name":"South American", "languages":["Японский","Португальский","Английский"]}
 
     ],
 		"PacRimJapan-Korea":[
-      {"name":"Korean", "languages":["Korean","English"]}]
+      {"name":"Korean", "languages":["Korean","Английский"]}]
     ,
 		"PacRimChina":[
 			{"name":"Han", "languages":["Mandarin Chinese"]},
@@ -56,19 +56,19 @@
 			{"name":"Moslem Ughurs", "languages":["Mandarin Chinese"]}
 		],
 		"PacRimSEAsia":[
-      {"name":"Burmese", "languages":["Burmese","English"]},
-			{"name":"Khmer", "languages":["Khmer","French","English"]},
-			{"name":"Vietnamese", "languages":["Vietnamese","French","English"]},
-			{"name":"Indian", "languages":["Tamil","Khmer","French","English"]},
+      {"name":"Burmese", "languages":["Burmese","Английский"]},
+			{"name":"Khmer", "languages":["Khmer","Французкий","Английский"]},
+			{"name":"Vietnamese", "languages":["Vietnamese","Французкий","Английский"]},
+			{"name":"Indian", "languages":["Tamil","Khmer","Французкий","Английский"]},
 			{"name":"Laotian", "languages":["Lao"]},
-			{"name":"Thai", "languages":["Thai","English"]},
-			{"name":"Malay", "languages":["Malaysia","English","Indonesian","Bahasa"]},
-			{"name":"Arab", "languages":["Arabic","Malaysia","English"]},
-			{"name":"Timorese", "languages":["Timorese","Bahasa","English","Indonesian"]},
-			{"name":"New Guinean", "languages":["Bahasa","English","Indonesian","Pidgin"]},
-			{"name":"Borneo Tribe", "languages":["Malaysia","Bahasa","English","Indonesian","Pidgin"]},
-			{"name":"Filipino", "languages":["Philipino(Tagalog)","English"]},
-      {"name":"Spanish", "languages":["Spanish","Philipino","English"]}
+			{"name":"Thai", "languages":["Thai","Английский"]},
+			{"name":"Malay", "languages":["Malaysia","Английский","Indonesian","Bahasa"]},
+			{"name":"Arab", "languages":["Arabic","Malaysia","Английский"]},
+			{"name":"Timorese", "languages":["Timorese","Bahasa","Английский","Indonesian"]},
+			{"name":"New Guinean", "languages":["Bahasa","Английский","Indonesian","Pidgin"]},
+			{"name":"Borneo Tribe", "languages":["Malaysia","Bahasa","Английский","Indonesian","Pidgin"]},
+			{"name":"Filipino", "languages":["Philipino(Tagalog)","Английский"]},
+      {"name":"Spanish", "languages":["Spanish","Philipino","Английский"]}
     ]
 	},
 	"motivations":[

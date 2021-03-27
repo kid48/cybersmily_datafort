@@ -30,7 +30,7 @@
 		],
 		"int":[
 			{"name":"Awareness/Notice","value":5},
-			{"name":"Language: French","value":3}
+			{"name":"Language: Французкий","value":3}
 		],
 		"ref":[
 			{"name":"Athletics","value":2},

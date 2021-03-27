@@ -39,9 +39,9 @@
 			{"name":"Expert: EBM Policy","value":3},
 			{"name":"Language: English","value":7},
 			{"name":"Language: Russian","value":8},
-			{"name":"Language: German","value":4},
-			{"name":"*Language: Japanese","value":3},
-			{"name":"*Language: French","value":3},
+			{"name":"Language: Немецкий","value":4},
+			{"name":"*Language: Японский","value":3},
+			{"name":"*Language: Французкий","value":3},
 			{"name":"Library Search","value":2},
 			{"name":"Shadow/Track","value":2}
 		],

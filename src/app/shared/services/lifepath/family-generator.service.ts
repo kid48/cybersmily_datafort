@@ -69,7 +69,7 @@ export class FamilyGeneratorService {
  * @memberof LifepathFamilyComponent
  */
 private GetChildhoodEnvironment(source: string, chart: any): string {
-    let results = ' Childhood environment ';
+    let results = ' Девство ';
     results  +=  this.diceService.rollOnChart(chart, source);
     return results;
   }
@@ -87,7 +87,7 @@ private GetChildhoodEnvironment(source: string, chart: any): string {
     if (this.diceService.generateNumber(1, 10) < tar) {
       return ' ' + this.diceService.rollOnChart(chart, source);
     } else {
-      const ok = (source === 'NeoTribe') ? 'Family standing among your clan is good.' : 'Family status is OK.';
+      const ok = (source === 'NeoTribe') ? 'Семья осталась среди вашего клана' : 'Семейное положение в порядке.';
       return ' ' + ok;
     }
 
@@ -107,7 +107,7 @@ private GetParentsSomethingHappened(somethingWrong: boolean, source: string, cha
     return ' ' + this.diceService.rollOnChart(chart, source);
   } else {
     if (source !== 'NeoTribe') {
-     return ' Both parents are living.';
+     return ' Оба родителя живы.';
     }
   }
   return '';
@@ -126,35 +126,35 @@ private GetParentOptions(source): LifepahtParentOption {
     if (source === 'NeoTribe') {
       switch (this.diceService.generateNumber(1, 6)) {
         case 1:
-          results.details = 'Child of Single Mother, Father unknown. ';
+          results.details = 'Ребенок матери-одиночки, отец неизвестен. ';
           break;
         case 2:
-          results.details = 'Child of Widow/er or Divorcee. ';
+          results.details = 'Ребенок вдовы(ца)';
           break;
         case 3:
-          results.details = 'Child of Two Parents. ';
+          results.details = 'Ребенок двух родителей. ';
           break;
         case 4:
-          results.details = 'Child of Group Marriage. ';
+          results.details = 'Ребенок от группового брака. ';
           break;
         case 5:
-          results.details = 'Orphan, Refugee, or Runaway. ';
+          results.details = 'Сирота, беженец или беглец. ';
           break;
         default:
-          results.details = 'Feral Child. ';
+          results.details = 'Дикое дитя. ';
       }
       switch (this.diceService.generateNumber(1, 6)) {
         case 1:
         case 2:
-          results.details += 'Parent(s) Alive. ';
+          results.details += 'Родитель(и) живы. ';
           break;
         case 3:
         case 4:
-          results.details  += 'Something happened to one of your parents. ';
+          results.details  += 'Что-то случилось с одним из ваших родителей. ';
           results.somethingWrong = true;
           break;
         default:
-          results.details += 'Something happened to both (or all) of your parents. ';
+          results.details += 'Что-то случилось с обоими вашими родителями. ';
           results.somethingWrong = true;
       }
     } else {
@@ -203,11 +203,11 @@ private GetParentOptions(source): LifepahtParentOption {
         sibling.gender = (isBro) ? 'brother' : 'sister';
         const roll = this.diceService.generateNumber(1, 10);
         if (roll === 10) {
-          sibling.age = 'same';
+          sibling.age = 'близнец';
         } else if (roll < 6) {
-          sibling.age = 'older ';
+          sibling.age = 'старшый(ая) ';
         } else {
-          sibling.age = 'younger ';
+          sibling.age = 'младший(ая) ';
         }
         sibling.feeling = this.diceService.rollOnChart(chartData.siblingFeeling, source);
 

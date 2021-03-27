@@ -30,7 +30,7 @@
 			{"name":"Education/Gen. Know","value":2},
 			{"name":"Expert: Law","value":2},
 			{"name":"Language: English","value":8},
-			{"name":"Language: Japanese","value":5},
+			{"name":"Language: Японский","value":5},
 			{"name":"Language: Spanish","value":4},
 			{"name":"Library Search","value":3},
 			{"name":"Shadow/Track","value":4}
@@ -60,7 +60,7 @@
 			"clothes":"Biker Leathers",
 			"hair":"Tinted",
 			"affectations":"Earrings",
-			"ethnicity":"Japanese",
+			"ethnicity":"Японский",
 			"languages":"English"
 		}
 	},
