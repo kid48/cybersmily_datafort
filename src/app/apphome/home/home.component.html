@@ -1,50 +1,50 @@
 <div class="container">
-    <h2 class="text-center">Welcome to Cybersmily's Datafort!</h2>
+    <h2 class="text-center">Добро пожаловать в Cybersmily's Datafort!</h2>
     <div>
-      This site was created back in the late 90's as a fan site dedicated to the R. Talsorian's tabletop RPG Cyberpunk 2020. Here you will find articles, web page apps, and other resources for CyberPunk 2020.
+      Этот сайт был создан еще в конце 90-х как фан-сайт, посвященный настольной ролевой игре Cyberpunk 2020 Р. Талсориана. Здесь вы найдете статьи, веб-приложения и другие ресурсы по CyberPunk 2020.
     </div>
     <br/>
      <div class="row">
     <div class="col-sm-12 col-md-3 csd-rounded csd-border">
-      <h4 class="text-center">Sections</h4>
+      <h4 class="text-center">Секции</h4>
       <ul class="list-unstyled">
         <li>
-          <h5>Data</h5>
-          <p>Data I have collected. Lists of things (gear, programs, vehicles, stuff) that I have compiled. Most of the content is conversions of other sources to fit with Cyberpunk 2020 rule set.</p>
+          <h5>Данные</h5>
+          <p>Данные, которые я собрал. Списки вещей (снаряжение, программы, автомобили, прочее), которые я составил. Большая часть контента - это преобразование других источников в соответствии с набором правил Cyberpunk 2020.</p>
         </li>
         <li>
-          <h5>Mods</h5>
-          <p>Modifications to the rules. This section contains rule mods and house rules I have used in some of my games over the years. Some are good, some not so much. But figure I'd share as a few of them might fit with your style of play.</p>
+          <h5>Моды</h5>
+          <p>Изменения в правилах. Этот раздел содержит модификации правил, которые я использовал в некоторых своих играх на протяжении многих лет. Некоторые хорошие, некоторые не очень. Но полагаю, я бы поделился, так как некоторые из них могут соответствовать вашему стилю игры.</p>
         </li>
         <li>
-          <h5>Shop</h5>
-          <p>Shop for custom gear I have created or re-engineered from other sources.</p>
+          <h5>Магазин</h5>
+          <p>Покупайте нестандартное снаряжение, которое я создал или переработал из других источников.</p>
         </li>
         <li>
-          <h5>Peeps</h5>
-          <p>The peeps that are in my campaign. NPCs and PCs from my games. Some of them are used within the scenarios on this site.</p>
+          <h5>Персонажи</h5>
+          <p>Персонажи, которое есть в моей кампании. НИП и ИП из моих игр. Некоторые из них используются в сценариях на этом сайте.</p>
         </li>
         <li>
-          <h5>Gigs</h5>
-          <p>Gigs for your edgerunners. Some scenarios I have run at conventions and with my group. You can also find here a news cast following the Firestorm supplement from R. Talsorian.</p>
+          <h5>Сценарии</h5>
+          <p>Сценарии для новичков. Некоторые сценарии я использовал на съездах и в своей группе. Вы также можете найти здесь выпуск новостей о дополнении Firestorm от Р. Талсориана.</p>
         </li>
         <li>
-          <h5>Apps - 2020/RED</h5>
-          <p>Applications (online utilities) for your game. Includes a cyberpunk 2020 lifepath generator, Cyberpunk 2020 fashion calculator, Cyberpunk 2020 Max Metal Calculator, Cyberpunk 2020 Character generator, Cyberpunk Red Character generator, Cyberpunk Red lifepath generator and a Cyberpunk 2020 Netrunning utility app for navigating the net.</p>
+          <h5>Приложения - 2020/RED</h5>
+          <p>Приложения (онлайн-утилиты) для вашей игры. Включает в себя генератор жизненного пути Cyberpunk 2020, калькулятор моды Cyberpunk 2020, калькулятор максимального количества металла Cyberpunk 2020, генератор персонажей Cyberpunk 2020, генератор персонажей Cyberpunk Red, генератор жизненных путей Cyberpunk Red и служебное приложение Cyberpunk 2020 Netrunning для навигации в сети.</p>
         </li>
         <li>
           <h5>DLow</h5>
-          <p>Downloads for use with your game. There's a PC Sheet, image files of maps, and Campaign Cartographer vector maps of Night City.</p>
+          <p>Загрузки для использования с вашей игрой. Есть PC Sheet, файлы изображений карт и векторные карты Campaign Cartographer Найт Сити.</p>
         </li>
         <li>
-          <h5>LDLs/Vids</h5>
-          <p>Long Distance Links of other dataforts I visit, and. some of the websites I believe are required for use with running and playing Cyberpunk 2020/Cyberpunk Red.</p>
+          <h5>LDLs/Видео</h5>
+          <p>Ссылки на другие информационные порталы, которые я посещаю, и. некоторые из веб-сайтов, которые, по моему мнению, необходимы для запуска и игры в Cyberpunk 2020 / Cyberpunk Red.</p>
         </li>
       </ul>
     </div>
     <div class="col-sm-12 col-md-1"></div>
     <div class="col-sm-12 col-md-7 csd-rounded csd-border">
-      <h4 class="text-center">Recent Updates</h4>
+      <h4 class="text-center">Последние обновления</h4>
       <div *ngFor="let newItem of newItems">
         <h5>{{newItem.date}}</h5>
         <p *ngFor="let entry of newItem.entries" [innerHTML]="entry"></p>

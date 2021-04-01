@@ -31,23 +31,23 @@ export interface SiteLinksGroup {
     constructor() {
       this.menuItems = [];
       this.menuItems.push({
-        groupTitle: 'Data',
-        description: 'Under Data you will find charts, listings, and some adapted content.',
+        groupTitle: 'Данные',
+        description: 'В разделе «Данные» вы найдете диаграммы, списки и некоторый адаптированный контент.',
         links: [
-          {title: 'CH2 Conversion', link: 'data/chrome2', desc: 'Conversion of Chromebook 2 vehicles to Maximum Metal rules.'},
-          {title: 'In the Media', link: 'data/inmedia',
-            desc: 'Movies, TV shows, Books, anime, manga, webisodes, etc for Cyberpunk inspiration'},
-          {title: 'Master Cyberware List', link: 'data/cyber', desc: 'List of all canon roles in Cyberpunk 2020'},
-          {title: 'Master Roles List', link: 'data/roles', desc: 'List of all canon roles in Cyberpunk 2020'},
-          {title: 'Master Skills List', link: 'data/skills', desc: 'List of all canon skills in Cyberpunk 2020'},
-          {title: 'Master Weapons List', link: 'data/wpns', desc: 'List of all canon weapons in Cyberpunk 2020'},
-          {title: 'More Guns', link: 'data/moreguns', desc: 'Guns updated from R. Talsorian\'s Edge of Sword supplement'},
-          {title: 'Proteus - Programs', link: 'data/proteus/prog',
-            desc: 'Convert programs based from the Netrunner CCG expansion.'},
-          {title: 'Proteus - Decks, Cyber, Gear', link: 'data/proteus/gear',
-            desc: 'Convert gear based from the Netrunner CCG expansion.'},
-          {title: 'Proteus - Sysops', link: 'data/proteus/sysops',
-            desc: 'Convert sysops based from the Netrunner CCG expansion.'}
+          {title: 'CH2 Переоборудование', link: 'data/chrome2', desc: 'Переоборудование автомобилей Chromebook 2 на правила Maximum Metal.'},
+          {title: 'В СМИ', link: 'data/inmedia',
+            desc: 'Фильмы, телешоу, книги, аниме, манга, вебизоды и т. д. Для вдохновения атмосферой киберпанк.'},
+          {title: 'Список киберимплантов', link: 'data/cyber', desc: 'Список всех канонических киберимплантов в Cyberpunk 2020'},
+          {title: 'Список ролей', link: 'data/roles', desc: 'Список всех канонических ролей в Cyberpunk 2020'},
+          {title: 'Список навыков', link: 'data/skills', desc: 'Список всех канонических навыков в Cyberpunk 2020'},
+          {title: 'Список пушек ', link: 'data/wpns', desc: 'Список всех канонических пушек в Cyberpunk 2020'},
+          {title: 'Больше пушек!', link: 'data/moreguns', desc: 'Оружие обновлено из дополнения R. Talsorian Edge of Sword'},
+          {title: 'Proteus - Программы', link: 'data/proteus/prog',
+            desc: 'Конвертированные программы из расширения Netrunner CCG.'},
+          {title: 'Proteus - Деки, Импланты, снаряга', link: 'data/proteus/gear',
+            desc: 'Конвертированные снаряжение  из расширения Netrunner CCG.'},
+          {title: 'Proteus - Сисопы', link: 'data/proteus/sysops',
+            desc: 'Конвертированные сисопы  из расширения Netrunner CCG'}
         ]
       });
       this.menuItems.push({
