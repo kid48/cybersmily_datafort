@@ -1,28 +1,27 @@
 <div class="container">
-  <h2>Master Roles List</h2>
-  <div>This is the master list of all Roles with their sources.
-    I took some liberty with salaries on ones that weren't offically posted.
-    Search is based on what the field starts with.
-    Sources were pulled from R. Talsorian and the Interface magazines.
+  <h2>Спискок ролей</h2>
+  <div>Это главный список всех ролей с их источниками.
+    Я позволил себе определенную вольность с зарплатой тех, кто не был официально объявлен.
+    Источники взяты из журналов R. Talsorian и Interface.
   </div>
   <table class="mstr-role-table csd-rounded">
     <tr class="csd-rounded bg-secondary text-light">
-      <th class="text-center">Role</th>
-      <th class="text-center">Base Role</th>
-      <th class="text-center">Special Ability</th>
-      <th class="text-center">Skills</th>
-      <th class="text-center">Secondary Skills</th>
-      <th class="text-center">Salary</th>
-      <th class="text-center">Source</th>
+      <th class="text-center">Роль</th>
+      <th class="text-center">Базовая Роль</th>
+      <th class="text-center">Спец способность</th>
+      <th class="text-center">Навыки</th>
+      <th class="text-center">Доп навыки</th>
+      <th class="text-center">Зарплата</th>
+      <th class="text-center">Источник</th>
     </tr>
     <tr class="csd-rounded">
-      <td><input [(ngModel)]="filters.role" type="search" placeholder="search on role" class="mstr-role-search"/></td>
-      <td><input [(ngModel)]="filters.base" type="search" placeholder="search on base role" class="mstr-role-search"/></td>
-      <td><input [(ngModel)]="filters.sa" type="search" placeholder="search on special ability" class="mstr-role-search"/></td>
-      <td><input [(ngModel)]="filters.skill" type="search" placeholder="search on special ability" class="mstr-role-search"/></td>
+      <td><input [(ngModel)]="filters.role" type="search" placeholder="Поиск по роли" class="mstr-role-search"/></td>
+      <td><input [(ngModel)]="filters.base" type="search" placeholder="Поиск по базовой роли" class="mstr-role-search"/></td>
+      <td><input [(ngModel)]="filters.sa" type="search" placeholder="Поиск по спец способности" class="mstr-role-search"/></td>
+      <td><input [(ngModel)]="filters.skill" type="search" placeholder="Поиск по навыку" class="mstr-role-search"/></td>
       <td></td>
       <td></td>
-      <td><input [(ngModel)]="filters.source" type="search" placeholder="search on source" class="mstr-role-search"/></td>
+      <td><input [(ngModel)]="filters.source" type="search" placeholder="Поиск по источнику" class="mstr-role-search"/></td>
     </tr>
     <ng-container *ngFor="let role of roleList|filter:'name':filters.role|filter:'base':filters.base|filter:'specialability.name':filters.sa|sourcebookFilter:filters.source|filter:'skills':filters.skill">
     <tr style="vertical-align: top;">

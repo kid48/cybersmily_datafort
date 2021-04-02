@@ -10,10 +10,10 @@
     <th class="text-center">Источник</th>
   </tr>
   <tr>
-    <td><input [(ngModel)]="filters.name" type="search" placeholder="search on name" class="skill-search"/></td>
-    <td><input [(ngModel)]="filters.stat" type="search" placeholder="search on stat" class="skill-search"/></td>
-    <td><input [(ngModel)]="filters.sa" type="search" placeholder="search on is special ability" class="skill-search"/></td>
-    <td><input [(ngModel)]="filters.source" type="search" placeholder="search on source" class="skill-search"/></td>
+    <td><input [(ngModel)]="filters.name" type="search" placeholder="Поиск по имени" class="skill-search"/></td>
+    <td><input [(ngModel)]="filters.stat" type="search" placeholder="Поиск по стату" class="skill-search"/></td>
+    <td><input [(ngModel)]="filters.sa" type="search" placeholder="Поиск по Спец умению" class="skill-search"/></td>
+    <td><input [(ngModel)]="filters.source" type="search" placeholder="Поиск по источнику" class="skill-search"/></td>
   </tr>
   <tr *ngFor="let sk of skillList |filter:'name': filters.name|filter:'stat': filters.stat|sourcebookFilter:filters.source|filter:'isspecialability': filters.searchSpclAbility"
       style="vertical-align: top;">
@@ -23,4 +23,4 @@
     <td class="text-center">{{sk.source|sourcebook}} pg. {{sk.page}}</td>
   </tr>
 </table>
-</div>
+</div> 

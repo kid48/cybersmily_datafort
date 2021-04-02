@@ -41,7 +41,7 @@ export class RoleListComponent implements OnInit {
    */
   getSkill(sk: any): string {
     if ( Array.isArray(sk)) {
-      return sk.join(' or ');
+      return sk.join(' или ');
     }
     return sk.replace('\\', '');
   }
