@@ -1,5 +1,5 @@
 <div class="row">
-  <div class="col-2">Name: </div>
+  <div class="col-2">Название: </div>
   <div class="col-7">
     <input [(ngModel)]="selectedDrug.name" type="text"> &nbsp;
     <fa-icon [icon]="faPlus" class="csd-btn" (click)="add()" title="Add to list"></fa-icon></div>
@@ -10,11 +10,11 @@
 <div class="row">
   <div class="col-1"></div>
   <div class="col-5">DIFF: {{selectedDrug.diff}}</div>
-  <div class="col-5">Cost: {{selectedDrug.cost}}eb</div>
+  <div class="col-5">Стоимость: {{selectedDrug.cost}}eb</div>
   <div class="col-1"></div>
 </div>
 <div class="row">
-  <div class="col-3">Effect: </div>
+  <div class="col-3">Еффект: </div>
   <div class="col-9">
     <div class="row">
       <div *ngFor="let e of effectList" class="col-6 effect-name" [title]="e.desc">
@@ -24,11 +24,11 @@
   </div>
 </div>
 <div class="row">
-  <div class="col-3">Strength:</div>
+  <div class="col-3">Сила:</div>
   <div class="col-9"><input type="number" [(ngModel)]="selectedDrug.strength"></div>
 </div>
 <div class="row">
-  <div class="col-3">Side Effects:</div>
+  <div class="col-3">Сторонные еффекты:</div>
   <div class="col-9">
     <div class="row">
       <div *ngFor="let e of sideEffectList" class="col-6 effect-name" [title]="e.desc">
@@ -38,16 +38,16 @@
   </div>
 </div>
 <div class="row">
-  <div class="col-3">Duration:</div>
+  <div class="col-3">Длительность:</div>
   <div class="col-5">
     <select [(ngModel)]="selectedDrug.duration">
-      <option value="1d10 turns" selected>1d10 turns</option>
-      <option value="1d10 minutes">1d10 minutes</option>
-      <option value="1d10 hours">1d10 hours</option>
+      <option value="1d10 turns" selected>1d10 Ходов</option>
+      <option value="1d10 minutes">1d10 Минут</option>
+      <option value="1d10 hours">1d10 Часов</option>
     </select>
   </div>
 </div>
 <div class="row">
-  <div class="col-3">Description:</div>
+  <div class="col-3">Описание:</div>
   <div class="col-9"><textarea [(ngModel)]="selectedDrug.description"></textarea></div>
 </div>
