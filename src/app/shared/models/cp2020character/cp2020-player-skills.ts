@@ -25,7 +25,7 @@ export class Cp2020PlayerSkills {
     this.skills.push(new Cp2020PlayerSkill({name: 'Плавание', ipmod: 1, stat: 'BODY'}));
     // COOL
     this.skills.push(new Cp2020PlayerSkill({name: 'Допрос', ipmod: 1, stat: 'COOL'}));
-    this.skills.push(new Cp2020PlayerSkill({name: 'Угрожать', ipmod: 1, stat: 'COOL'}));
+    this.skills.push(new Cp2020PlayerSkill({name: 'Запугивание', ipmod: 1, stat: 'COOL'}));
     this.skills.push(new Cp2020PlayerSkill({name: 'Красноречие', ipmod: 1, stat: 'COOL'}));
     this.skills.push(new Cp2020PlayerSkill({name: 'Устойчивочть к пыткам и наркотикам', ipmod: 1, stat: 'COOL'}));
     this.skills.push(new Cp2020PlayerSkill({name: 'Знание Улиц', ipmod: 1, stat: 'COOL'}));
@@ -33,7 +33,7 @@ export class Cp2020PlayerSkills {
     this.skills.push(new Cp2020PlayerSkill({name: 'Понимание Людей', ipmod: 1, stat: 'EMP'}));
     this.skills.push(new Cp2020PlayerSkill({name: 'Интервью', ipmod: 1, stat: 'EMP'}));
     this.skills.push(new Cp2020PlayerSkill({name: 'Лидерство', ipmod: 1, stat: 'EMP'}));
-    this.skills.push(new Cp2020PlayerSkill({name: 'Убеждать и Заговаривать Зубы', ipmod: 1, stat: 'EMP'}));
+    this.skills.push(new Cp2020PlayerSkill({name: 'Убеждать/Заговаривать зубы', ipmod: 1, stat: 'EMP'}));
     this.skills.push(new Cp2020PlayerSkill({name: 'Выступать', ipmod: 1, stat: 'EMP'}));
     this.skills.push(new Cp2020PlayerSkill({name: 'Соблазнение', ipmod: 1, stat: 'EMP'}));
     this.skills.push(new Cp2020PlayerSkill({name: 'Social', ipmod: 1, stat: 'EMP'}));
@@ -64,7 +64,7 @@ export class Cp2020PlayerSkills {
     this.skills.push(new Cp2020PlayerSkill({name: 'Математика', ipmod: 1, stat: 'INT'}));
     this.skills.push(new Cp2020PlayerSkill({name: 'Физика', ipmod: 1, stat: 'INT'}));
     this.skills.push(new Cp2020PlayerSkill({name: 'Програмирование', ipmod: 1, stat: 'INT'}));
-    this.skills.push(new Cp2020PlayerSkill({name: 'Следить/Шпионить', ipmod: 1, stat: 'INT'}));
+    this.skills.push(new Cp2020PlayerSkill({name: 'Скрытное наблюдение', ipmod: 1, stat: 'INT'}));
     this.skills.push(new Cp2020PlayerSkill({name: 'Выживание в Космосе', ipmod: 1, stat: 'INT'}));
     this.skills.push(new Cp2020PlayerSkill({name: 'Игра на Бирже', ipmod: 1, stat: 'INT'}));
     this.skills.push(new Cp2020PlayerSkill({name: 'Знание Сети', ipmod: 1, stat: 'INT'}));
@@ -75,12 +75,12 @@ export class Cp2020PlayerSkills {
     // REF
     this.skills.push(new Cp2020PlayerSkill({name: 'Лук/Арбалет', ipmod: 1, stat: 'REF'}));
     this.skills.push(new Cp2020PlayerSkill({name: 'Атлетика', ipmod: 1, stat: 'REF'}));
-    this.skills.push(new Cp2020PlayerSkill({name: 'Борьба', ipmod: 1, stat: 'REF'}));
+    this.skills.push(new Cp2020PlayerSkill({name: 'Драка', ipmod: 1, stat: 'REF'}));
     this.skills.push(new Cp2020PlayerSkill({name: 'Танцевать', ipmod: 1, stat: 'REF'}));
     this.skills.push(new Cp2020PlayerSkill({name: 'Уворачиваться', ipmod: 1, stat: 'REF'}));
     this.skills.push(new Cp2020PlayerSkill({name: 'Вождение', ipmod: 1, stat: 'REF'}));
     this.skills.push(new Cp2020PlayerSkill({name: 'Фехтование', ipmod: 1, stat: 'REF'}));
-    this.skills.push(new Cp2020PlayerSkill({name: 'Пистолет', ipmod: 1, stat: 'REF'}));
+    this.skills.push(new Cp2020PlayerSkill({name: 'Пистолеты', ipmod: 1, stat: 'REF'}));
     this.skills.push(new Cp2020PlayerSkill({name: 'Тяжелое оружые', ipmod: 1, stat: 'REF'}));
     this.skills.push(new Cp2020PlayerSkill({name: 'Боевое искуство', option: '', ipmod: 1, stat: 'REF'}));
     this.skills.push(new Cp2020PlayerSkill({name: 'Боевое искуство', option: '', ipmod: 1, stat: 'REF'}));

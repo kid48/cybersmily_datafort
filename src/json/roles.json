@@ -1,12 +1,12 @@
 ﻿{"roles":[
-{"name":"Соло"			,"stat":"REF" ,"specialability":"Чуство боя"				,"skills":["Замечать/узнавать","Ближний бой","Атлетика","Пистолет","Ружье","Борьба|Боевое искуство", "Weapons Tech", "SMG","Stealth"]},
-{"name":"Номад"			,"stat":"REF" ,"specialability":"Семья"					,"skills":["Awareness/Notice","Ближний бой","Атлетика","Борьба","Ружье","Endurance","Drive","Basic Tech", "Wilderness Survival"]},
-{"name":"Коп"			,"stat":"COOL","specialability":"Авторитет"					,"skills":["Awareness/Notice","Ближний бой","Атлетика","Пистолет","Human Perception","Education","Борьба","Interrogration","Streetwise"]},
-{"name":"Фиксер"			,"stat":"COOL","specialability":"Уличная сделка"				,"skills":["Awareness/Notice","Ближний бой","Пистолет","Forgery","Борьба","Pick Lock", "Pick Pocket","Intimidate","Persuasion"]},
+{"name":"Соло"			,"stat":"REF" ,"specialability":"Чуство боя"				,"skills":["Замечать/узнавать","Ближний бой","Атлетика","Пистолет","Ружье","Драка|Боевое искуство", "Weapons Tech", "SMG","Stealth"]},
+{"name":"Номад"			,"stat":"REF" ,"specialability":"Семья"					,"skills":["Awareness/Notice","Ближний бой","Атлетика","Драка","Ружье","Endurance","Drive","Basic Tech", "Wilderness Survival"]},
+{"name":"Коп"			,"stat":"COOL","specialability":"Авторитет"					,"skills":["Awareness/Notice","Ближний бой","Атлетика","Пистолет","Human Perception","Education","Драка","Interrogration","Streetwise"]},
+{"name":"Фиксер"			,"stat":"COOL","specialability":"Уличная сделка"				,"skills":["Awareness/Notice","Ближний бой","Пистолет","Forgery","Драка","Pick Lock", "Pick Pocket","Intimidate","Persuasion"]},
 {"name":"Корпорат"		,"stat":"INT" ,"specialability":"Ресурсы"					,"skills":["Awareness/Notice","Social","Education","Human Perception","Library Search","Persuasion","Stock Market","Wardrobe & Style", "Personal Grooming"]},
 {"name":"Технарь"		,"stat":"TECH","specialability":"Импровизированный ремонт"					,"skills":["Awareness/Notice","Basic Tech","CyberTech","Teaching","Education","Electronics","Gryo Tech|Aero Tech|Weapons Tech|Elect. Security|AV Tech"]},
 {"name":"Медицинская техник"	,"stat":"TECH","specialability":"Медецина"					,"skills":["Awareness/Notice","Basic Tech","Diagnose","Cryotank Operations","Library Search","Pharmeuticals","Zoology","Human Perception"]},
 {"name":"Нетраннер"		,"stat":"INT" ,"specialability":"Интерфейс"					,"skills":["Awareness/Notice","Basic Tech","Education","System Knowledge","CyberTech","Cyberdeck Design","Composition","Electronics","Programming"]},
 {"name":"Журналист"			,"stat":"INT" ,"specialability":"Достоверность"				,"skills":["Awareness/Notice","Composition","Education","Persuasion","Human Perception","Social","Streetwise","Photo & Film","Interview"]},
-{"name":"Рокер"		,"stat":"COOL","specialability":"Харизматичное лидерство"	,"skills":["Awareness/Notice","Perform","Wardrobe & Style","Composition","Борьба","Play Instrument","Streetwise","Persuasion","Seduction"]}
+{"name":"Рокер"		,"stat":"COOL","specialability":"Харизматичное лидерство"	,"skills":["Awareness/Notice","Perform","Wardrobe & Style","Composition","Драка","Play Instrument","Streetwise","Persuasion","Seduction"]}
 ]}
